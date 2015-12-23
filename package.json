@@ -1,0 +1,32 @@
+{
+  "name": "list-index-changes",
+  "version": "1.0.0",
+  "description": "Get all element movement within lists",
+  "main": "index.js",
+  "scripts": {
+    "test": "jscs index.js test/*.js && jshint index.js test/*.js && mocha test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/packagestats/list-index-changes.git"
+  },
+  "keywords": [
+    "list",
+    "index",
+    "changes",
+    "rank",
+    "movement",
+    "elements"
+  ],
+  "author": "Joel Kemp <joel@mrjoelkemp.com> (http://www.mrjoelkemp.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/packagestats/list-index-changes/issues"
+  },
+  "homepage": "https://github.com/packagestats/list-index-changes#readme",
+  "devDependencies": {
+    "jscs": "~2.7.0",
+    "jscs-preset-mrjoelkemp": "~1.0.0",
+    "jshint": "~2.8.0"
+  }
+}
