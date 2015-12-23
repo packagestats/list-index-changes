@@ -27,6 +27,7 @@
   "devDependencies": {
     "jscs": "~2.7.0",
     "jscs-preset-mrjoelkemp": "~1.0.0",
-    "jshint": "~2.8.0"
+    "jshint": "~2.8.0",
+    "mocha": "~2.3.4"
   }
 }

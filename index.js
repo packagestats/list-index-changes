@@ -1,5 +1,8 @@
-module.exports = function(yesterday, today) {
+module.exports = function(yesterday, today, options) {
   var changes = [];
+  options = options || {};
+
+  var offset = options.ordinal ? 1 : 0;
 
   yesterday.forEach(function(element, idx) {
     var todayIndex = today.indexOf(element);
@@ -8,7 +11,7 @@ module.exports = function(yesterday, today) {
     if (todayIndex === -1) {
       changes.push({
         element: element,
-        was: idx,
+        was: idx + offset,
         now: null
       });
 
@@ -16,8 +19,8 @@ module.exports = function(yesterday, today) {
     } else if (todayIndex !== idx) {
       changes.push({
         element: element,
-        was: idx,
-        now: todayIndex
+        was: idx + offset,
+        now: todayIndex + offset
       });
     }
   });
@@ -30,7 +33,7 @@ module.exports = function(yesterday, today) {
       changes.push({
         element: element,
         was: null,
-        now: idx
+        now: idx + offset
       });
     }
   });

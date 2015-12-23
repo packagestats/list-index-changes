@@ -31,6 +31,7 @@ var results = listIndexChanges(yesterday, today);
 ```
 
 * `was` and `now` represent positional indices within the lists
+ * You can optionally get ordinal positions instead of array indices by supplying `{ordinal: true}`. Example: `listIndexChanges(yesterday, today, {ordinal: true})`.
 
 ### License
 

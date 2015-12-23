@@ -97,4 +97,24 @@ describe('list-index-changes', function() {
       now: null
     });
   });
+
+  it('supports ordinal positions', function() {
+    var yesterday = ['foo', 'bar'];
+    var today = [];
+    var changes = listIndexChanges(yesterday, today, {ordinal: true});
+
+    assert.equal(changes.length, 2);
+
+    assert.deepEqual(changes[0], {
+      element: 'foo',
+      was: 1,
+      now: null
+    });
+
+    assert.deepEqual(changes[1], {
+      element: 'bar',
+      was: 2,
+      now: null
+    });
+  });
 });
